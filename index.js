@@ -1,6 +1,6 @@
 let inputDate = document.querySelector("#input-date");
 let buttonCheck = document.querySelector("#btn-check");
-let outputMessage = document.querySelector("#output-message");
+let outputMessage = document.querySelector("#output-box");
 
 buttonCheck.addEventListener("click", onClickHandle);
 
@@ -135,17 +135,18 @@ function displayMessage(flag, date){
     outputMessage.style.display = "block";
     outputMessage.innerText = "Yay! your birthday is palindrome";
     outputMessage.className = "output";
-    outputMessage.className =
-      "output mt-3 d-flex justify-content-center font-weight-bold rounded";
-    outputMessage.style.backgroundColor = "greenyellow";
+    // outputMessage.className =
+    //   "output mt-3 d-flex justify-content-center font-weight-bold rounded";
+    // outputMessage.style.backgroundColor = "greenyellow";
   } else {
       
     let [counter, nextDate] = nextPalindromeDate(date);
     console.log(counter,nextDate)
     outputMessage.style.display = "block";
     outputMessage.innerText = `Ahh! you missed it by ${counter} days.Next palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}`;
-    outputMessage.className =
-      "output mt-3 d-flex justify-content-center font-weight-bold rounded";
-    outputMessage.style.backgroundColor = "orange";
-  }
+  //   outputMessage.className =
+  //     "output mt-3 d-flex justify-content-center font-weight-bold rounded";
+  //   outputMessage.style.backgroundColor = "#facc15";
+  // 
+}
 }
